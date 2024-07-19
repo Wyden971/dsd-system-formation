@@ -1,6 +1,6 @@
 import { User } from "@/models";
 import { View, Text } from "react-native";
-import { TextField, TextFieldHandle } from "../TextField";
+import { TextField } from "../TextField";
 import { useEffect, useRef } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Button } from "../Button";
@@ -30,17 +30,17 @@ const USER_FORM_DEFAULT_VALUES = {
   firstName: "Wendy",
   lastName: "JEAN-LOUIS",
   email: "jeanlouis.wendy@gmail.com",
-  telephone: "+33626071310",
+  telephone: "",
   age: "32" as unknown as number,
   objets: ["Obj 1", "Obj 2", "Obj 3"],
 };
 
 export const UserForm = ({ user, onSuccess, onSave }: Props) => {
-  const firstNameRef = useRef<TextFieldHandle>();
-  const lastNameRef = useRef<TextFieldHandle>();
-  const emailRef = useRef<TextFieldHandle>();
-  const telephoneRef = useRef<TextFieldHandle>();
-  const ageRef = useRef<TextFieldHandle>();
+  const firstNameRef = useRef<TextField>(null);
+  const lastNameRef = useRef<TextField>(null);
+  const emailRef = useRef<TextField>(null);
+  const telephoneRef = useRef<TextField>(null);
+  const ageRef = useRef<TextField>(null);
 
   const form = useForm({
     resolver: yupResolver(userFormSchema),
@@ -61,7 +61,6 @@ export const UserForm = ({ user, onSuccess, onSave }: Props) => {
     await onSuccess();
   });
 
-  console.log("form: ", form.formState.errors);
   useEffect(() => {
     form.reset({
       firstName: user?.firstName ?? USER_FORM_DEFAULT_VALUES.firstName,

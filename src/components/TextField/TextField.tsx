@@ -11,11 +11,12 @@ export interface Props extends TextInputProps {
   className?: string;
 }
 
-export type TextFieldHandle = {
+type TextFieldHandle = {
   focus: () => void;
 };
 
-export const TextField = forwardRef(
+export declare type TextField = TextFieldHandle;
+export const TextField = forwardRef<TextFieldHandle, Props>(
   (
     { label, placeholder, name, error, required, className, ...props }: Props,
     ref

@@ -1,5 +1,1 @@
-export {
-  TextField,
-  Props as TextFieldProps,
-  TextFieldHandle,
-} from "./TextField";
+export { TextField, Props as TextFieldProps } from "./TextField";

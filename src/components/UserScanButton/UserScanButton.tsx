@@ -5,11 +5,12 @@ import { Iconify } from "react-native-iconify";
 import { BottomSheetBackdrop } from "../BottomSheetBackdrop";
 import { CameraView } from "expo-camera";
 import { Button } from "../Button";
-import { useCameraPermissions, PermissionStatus } from "expo-image-picker";
+import { useCameraPermissions } from "expo-image-picker";
 
 export type Props = {
   onUserFound: (userId: string) => void;
 };
+
 export const UserScanButton = ({ onUserFound }: Props) => {
   const [code, setCode] = useState<string>();
 

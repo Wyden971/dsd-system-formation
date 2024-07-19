@@ -1,0 +1,29 @@
+🩺 The doctor is checking the health of your Storybook..
+╭ Incompatible packages found ───────────────────────────────────────────────────────────────╮
+│                                                                                            │
+│   The following packages are incompatible with Storybook 8.2.4 as they depend on           │
+│   different major versions of Storybook packages:                                          │
+│   - @storybook/addon-ondevice-actions@7.6.20                                               │
+│   Repo: https://storybook.js.org/                                                          │
+│   - @storybook/addon-ondevice-backgrounds@7.6.20                                           │
+│   Repo: https://storybook.js.org                                                           │
+│   - @storybook/addon-ondevice-controls@7.6.20                                              │
+│   - @storybook/addon-ondevice-notes@7.6.20                                                 │
+│   - @storybook/react-native@7.6.20                                                         │
+│   Repo: https://storybook.js.org/                                                          │
+│   - @storybook/react-native-server@6.5.8                                                   │
+│   Repo: https://storybook.js.org/                                                          │
+│                                                                                            │
+│                                                                                            │
+│   Please consider updating your packages or contacting the maintainers for compatibility   │
+│   details.                                                                                 │
+│   For more on Storybook 8 compatibility, see the linked GitHub issue:                      │
+│   https://github.com/storybookjs/storybook/issues/26031                                    │
+│                                                                                            │
+╰────────────────────────────────────────────────────────────────────────────────────────────╯
+
+You can always recheck the health of your project by running:
+npx storybook doctor
+
+Full logs are available in /Users/wendy/Projects/dsd-system/doctor-storybook.log
+
