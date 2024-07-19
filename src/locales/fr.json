@@ -1,0 +1,5 @@
+{
+  "user": {
+    "title": "{nbUsers, plural, =0 {Aucun utilisateurs} one {1 utilisateur} other {# utilisateurs}}"
+  }
+}
